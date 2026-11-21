@@ -32,29 +32,9 @@
     line-height: 1.6;
   }
   .wrap { max-width: 1120px; margin: 0 auto; padding: 40px 20px 64px; }
-  header h1 { font-size: 28px; line-height: 1.3; margin: 0 0 8px; letter-spacing: .01em; }
-  header p { margin: 0; color: var(--muted); max-width: 70ch; }
-  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-  .tag { font-size: 12.5px; color: var(--muted); border: 1px solid var(--border); background: var(--surface); padding: 3px 10px; border-radius: 999px; }
-  h2 { font-size: 19px; margin: 44px 0 6px; }
-  h2 + .sub { color: var(--muted); margin: 0 0 16px; font-size: 14px; }
+  h2 { font-size: 19px; margin: 44px 0 14px; }
+  .wrap > h2:first-child { margin-top: 0; }
   .num { font-variant-numeric: tabular-nums; }
-
-  /* overview bars */
-  .overview { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 20px 14px; }
-  .legend { display: flex; gap: 18px; font-size: 13px; color: var(--muted); margin-bottom: 14px; }
-  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
-  .ov-row { display: grid; grid-template-columns: 150px 1fr; gap: 14px; align-items: center; padding: 8px 0; border-top: 1px solid var(--border); }
-  .ov-row:first-of-type { border-top: 0; }
-  .ov-name { font-size: 14px; }
-  .bars { display: grid; gap: 5px; }
-  .bar { display: flex; align-items: center; gap: 8px; }
-  .bar span.fill { height: 10px; border-radius: 3px; min-width: 2px; }
-  .bar.pr95 .fill { background: var(--pr95); }
-  .bar.pr99 .fill { background: var(--pr99); }
-  .bar b { font-weight: 600; font-size: 13px; }
-  .scale { display: grid; grid-template-columns: 150px 1fr; gap: 14px; font-size: 11.5px; color: var(--faint); margin-top: 4px; }
-  .ticks { display: flex; justify-content: space-between; }
 
   /* tables */
   .table-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
@@ -85,16 +65,11 @@
   .notes dt { font-weight: 600; margin-top: 16px; }
   .notes dd { margin: 4px 0 16px; color: var(--muted); font-size: 14px; }
   .notes dd ul { margin: 4px 0 0; padding-left: 20px; }
-  .sources { font-size: 14px; color: var(--muted); padding-left: 20px; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  footer { margin-top: 40px; color: var(--faint); font-size: 13px; border-top: 1px solid var(--border); padding-top: 16px; }
 
   @media (max-width: 760px) {
     .wrap { padding: 28px 16px 48px; }
-    header h1 { font-size: 23px; }
-    .ov-row, .scale { grid-template-columns: 96px 1fr; gap: 10px; }
-    .ov-name { font-size: 13px; }
     .table-card { background: transparent; border: 0; overflow: visible; }
     thead { display: none; }
     table, tbody, tr, td { display: block; width: 100%; }
@@ -111,43 +86,7 @@
 <body>
 <div class="wrap">
 
-<header>
-  <h1>高薪族的所得稅與社保負擔比較</h1>
-  <p>比較六個地區在個人薪資 PR95 與 PR99 時，員工要繳的所得稅、社會保險費，以及繳完後的淨收入。</p>
-  <div class="tags">
-    <span class="tag">2025 稅年</span>
-    <span class="tag">單身・無扶養・只有薪資所得</span>
-    <span class="tag">只算員工自付部分</span>
-    <span class="tag">金額為估算</span>
-  </div>
-</header>
-
-<h2>負擔率一覽</h2>
-<p class="sub">實質總負擔率 =（所得稅 + 員工社保）÷ 薪資</p>
-<section class="overview" aria-label="各地區 PR95 與 PR99 負擔率">
-  <div class="legend"><span><i style="background:var(--pr95)"></i>PR95</span><span><i style="background:var(--pr99)"></i>PR99</span></div>
-  <div class="ov-row"><div class="ov-name">🇨🇦 加拿大・安省</div><div class="bars">
-    <div class="bar pr95"><span class="fill" style="width:calc(30.8% / 40 * 88)"></span><b class="num">30.8%</b></div>
-    <div class="bar pr99"><span class="fill" style="width:calc(39.9% / 40 * 88)"></span><b class="num">39.9%</b></div></div></div>
-  <div class="ov-row"><div class="ov-name">🇺🇸 美國・加州</div><div class="bars">
-    <div class="bar pr95"><span class="fill" style="width:calc(31.7% / 40 * 88)"></span><b class="num">31.7%</b></div>
-    <div class="bar pr99"><span class="fill" style="width:calc(35.9% / 40 * 88)"></span><b class="num">35.9%</b></div></div></div>
-  <div class="ov-row"><div class="ov-name">🇯🇵 日本・東京</div><div class="bars">
-    <div class="bar pr95"><span class="fill" style="width:calc(28.6% / 40 * 88)"></span><b class="num">28.6%</b></div>
-    <div class="bar pr99"><span class="fill" style="width:calc(32.5% / 40 * 88)"></span><b class="num">32.5%</b></div></div></div>
-  <div class="ov-row"><div class="ov-name">🇺🇸 美國・德州</div><div class="bars">
-    <div class="bar pr95"><span class="fill" style="width:calc(24.1% / 40 * 88)"></span><b class="num">24.1%</b></div>
-    <div class="bar pr99"><span class="fill" style="width:calc(28.1% / 40 * 88)"></span><b class="num">28.1%</b></div></div></div>
-  <div class="ov-row"><div class="ov-name">🇨🇳 中國・上海</div><div class="bars">
-    <div class="bar pr95"><span class="fill" style="width:calc(20.4% / 40 * 88)"></span><b class="num">20.4%</b></div>
-    <div class="bar pr99"><span class="fill" style="width:calc(24.7% / 40 * 88)"></span><b class="num">24.7%</b></div></div></div>
-  <div class="ov-row"><div class="ov-name">🇹🇼 台灣</div><div class="bars">
-    <div class="bar pr95"><span class="fill" style="width:calc(8.5% / 40 * 88)"></span><b class="num">8.5%</b></div>
-    <div class="bar pr99"><span class="fill" style="width:calc(14.1% / 40 * 88)"></span><b class="num">14.1%</b></div></div></div>
-</section>
-
 <h2>PR95 薪資</h2>
-<p class="sub">依負擔率由高到低排列</p>
 <div class="table-card pr95-table">
 <table>
   <thead><tr>
@@ -212,7 +151,6 @@
 </div>
 
 <h2>PR99 薪資</h2>
-<p class="sub">依負擔率由高到低排列</p>
 <div class="table-card pr99-table">
 <table>
   <thead><tr>
@@ -319,19 +257,6 @@
     </ul></dd>
   </dl>
 </section>
-
-<h2>資料來源</h2>
-<ul class="sources">
-  <li><a href="https://blog.104.com.tw/?p=159362">104 職場力：114 年度綜所稅</a></li>
-  <li><a href="https://news.tvbs.com.tw/life/3188888">TVBS 新聞：綜所稅級距</a></li>
-  <li><a href="https://www.etax.nat.gov.tw/etwmain/alien-tax-service/alien-individual-income-tax/e92AvqV">財政部電子申報繳稅服務網</a></li>
-  <li><a href="https://m.sh.bendibao.com/zffw/294609.html">上海本地寶：上海社保繳費基數</a></li>
-  <li><a href="https://www.thepaper.cn/newsDetail_forward_31544282">澎湃新聞：上海社保基數調整</a></li>
-</ul>
-
-<footer>
-  更新日期：2026-11-21。本頁數字為依公開稅率所做的估算，實際稅額依個人情況而定，不構成稅務建議。
-</footer>
 
 </div>
 </body>
