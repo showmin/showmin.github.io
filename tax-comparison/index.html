@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>高薪族稅負比較 2025</title>
+<title>稅負比較 2025</title>
 <meta name="description" content="加拿大安省、美國加州與德州、日本東京、中國上海、台灣：PR95 與 PR99 薪資的所得稅、社會保險與淨收入比較（2025 稅年）。">
 <style>
   :root {
@@ -33,7 +33,7 @@
   }
   .wrap { max-width: 1120px; margin: 0 auto; padding: 40px 20px 64px; }
   h2 { font-size: 19px; margin: 44px 0 14px; }
-  .wrap > h2:first-child { margin-top: 0; }
+  h1 { font-size: 26px; line-height: 1.3; margin: 0 0 8px; }
   .num { font-variant-numeric: tabular-nums; }
 
   /* tables */
@@ -51,6 +51,7 @@
   td.country span { color: var(--muted); font-size: 13px; }
   td .detail { display: block; color: var(--faint); font-size: 12.5px; margin-top: 2px; }
   td.net { color: var(--good); font-weight: 600; }
+  td.net .twd { display: block; color: var(--muted); font-weight: 400; white-space: nowrap; margin-left: -.5em; }
   td.rate { white-space: nowrap; }
   td.rate .pct { font-size: 17px; font-weight: 700; }
   td.rate .mini { display: block; height: 4px; border-radius: 2px; background: var(--border); margin-top: 6px; width: 96px; overflow: hidden; }
@@ -70,6 +71,7 @@
 
   @media (max-width: 760px) {
     .wrap { padding: 28px 16px 48px; }
+    h1 { font-size: 22px; }
     .table-card { background: transparent; border: 0; overflow: visible; }
     thead { display: none; }
     table, tbody, tr, td { display: block; width: 100%; }
@@ -86,6 +88,8 @@
 <body>
 <div class="wrap">
 
+<h1>稅負比較 2025</h1>
+
 <h2>PR95 薪資</h2>
 <div class="table-card pr95-table">
 <table>
@@ -94,7 +98,7 @@
     <th>所得稅總額<small>所得稅 + 地方/州/省稅</small></th>
     <th>社會保險費<small>員工自付</small></th>
     <th>實質總負擔金額</th>
-    <th>淨收入<small>薪資 − 總負擔</small></th>
+    <th>淨收入<small>薪資 − 總負擔，括號內為台幣等值</small></th>
     <th>實質總負擔率</th>
   </tr></thead>
   <tbody>
@@ -103,7 +107,7 @@
       <td data-label="所得稅總額" class="num">約 $33,100 USD<span class="detail">聯邦 2.39萬 + 加州 0.92萬</span></td>
       <td data-label="社會保險費" class="num">約 $12,800 USD<span class="detail">FICA 1.11萬 + SDI 0.17萬</span></td>
       <td data-label="總負擔金額" class="num">約 $45,900 USD</td>
-      <td data-label="淨收入" class="num net">約 $99,100 USD</td>
+      <td data-label="淨收入" class="num net">約 $99,100 USD<span class="twd">（約 308.7萬 TWD）</span></td>
       <td data-label="負擔率" class="rate"><span class="pct num"><span class="badge">🚨</span>31.7%</span><span class="mini"><i style="width:79%"></i></span></td>
     </tr>
     <tr>
@@ -111,7 +115,7 @@
       <td data-label="所得稅總額" class="num">約 $40,600 CAD<span class="detail">聯邦約 2.6萬 + 安省約 1.5萬</span></td>
       <td data-label="社會保險費" class="num">約 $5,500 CAD<span class="detail">CPP + CPP2 + EI</span></td>
       <td data-label="總負擔金額" class="num">約 $46,100 CAD</td>
-      <td data-label="淨收入" class="num net">約 $103,900 CAD</td>
+      <td data-label="淨收入" class="num net">約 $103,900 CAD<span class="twd">（約 231.7萬 TWD）</span></td>
       <td data-label="負擔率" class="rate"><span class="pct num"><span class="badge">📊</span>30.8%</span><span class="mini"><i style="width:77%"></i></span></td>
     </tr>
     <tr>
@@ -119,7 +123,7 @@
       <td data-label="所得稅總額" class="num">約 141萬 JPY<span class="detail">所得税 79萬 + 住民税 62萬</span></td>
       <td data-label="社會保險費" class="num">約 145萬 JPY</td>
       <td data-label="總負擔金額" class="num">約 286萬 JPY</td>
-      <td data-label="淨收入" class="num net">約 714萬 JPY</td>
+      <td data-label="淨收入" class="num net">約 714萬 JPY<span class="twd">（約 148.6萬 TWD）</span></td>
       <td data-label="負擔率" class="rate"><span class="pct num"><span class="badge">📈</span>28.6%</span><span class="mini"><i style="width:71.5%"></i></span></td>
     </tr>
     <tr>
@@ -127,7 +131,7 @@
       <td data-label="所得稅總額" class="num">約 $23,900 USD<span class="detail">聯邦 2.39萬 + 德州 0</span></td>
       <td data-label="社會保險費" class="num">約 $11,100 USD<span class="detail">FICA</span></td>
       <td data-label="總負擔金額" class="num">約 $35,000 USD</td>
-      <td data-label="淨收入" class="num net">約 $110,000 USD</td>
+      <td data-label="淨收入" class="num net">約 $110,000 USD<span class="twd">（約 343.0萬 TWD）</span></td>
       <td data-label="負擔率" class="rate"><span class="pct num"><span class="badge">📉</span>24.1%</span><span class="mini"><i style="width:60%"></i></span></td>
     </tr>
     <tr>
@@ -135,7 +139,7 @@
       <td data-label="所得稅總額" class="num">約 35,500 RMB</td>
       <td data-label="社會保險費" class="num">約 37,800 RMB<span class="detail">養老 + 醫療 + 失業</span></td>
       <td data-label="總負擔金額" class="num">約 73,300 RMB</td>
-      <td data-label="淨收入" class="num net">約 286,700 RMB</td>
+      <td data-label="淨收入" class="num net">約 286,700 RMB<span class="twd">（約 124.3萬 TWD）</span></td>
       <td data-label="負擔率" class="rate"><span class="pct num"><span class="badge">📉</span>20.4%</span><span class="mini"><i style="width:51%"></i></span></td>
     </tr>
     <tr>
@@ -158,7 +162,7 @@
     <th>所得稅總額<small>所得稅 + 地方/州/省稅</small></th>
     <th>社會保險費<small>員工自付</small></th>
     <th>實質總負擔金額</th>
-    <th>淨收入<small>薪資 − 總負擔</small></th>
+    <th>淨收入<small>薪資 − 總負擔，括號內為台幣等值</small></th>
     <th>實質總負擔率</th>
   </tr></thead>
   <tbody>
@@ -167,7 +171,7 @@
       <td data-label="所得稅總額" class="num">約 $111,800 CAD<span class="detail">聯邦 6.84萬 + 安省 4.34萬</span></td>
       <td data-label="社會保險費" class="num">約 $5,500 CAD<span class="detail">已封頂</span></td>
       <td data-label="總負擔金額" class="num">約 $117,300 CAD</td>
-      <td data-label="淨收入" class="num net">約 $176,500 CAD</td>
+      <td data-label="淨收入" class="num net">約 $176,500 CAD<span class="twd">（約 393.6萬 TWD）</span></td>
       <td data-label="負擔率" class="rate"><span class="pct num"><span class="badge">🚨</span>39.9%</span><span class="mini"><i style="width:99.75%"></i></span></td>
     </tr>
     <tr>
@@ -175,7 +179,7 @@
       <td data-label="所得稅總額" class="num">約 $84,300 USD<span class="detail">聯邦 6.16萬 + 加州 2.27萬</span></td>
       <td data-label="社會保險費" class="num">約 $19,400 USD<span class="detail">FICA 1.59萬 + SDI 0.35萬</span></td>
       <td data-label="總負擔金額" class="num">約 $103,700 USD</td>
-      <td data-label="淨收入" class="num net">約 $185,400 USD</td>
+      <td data-label="淨收入" class="num net">約 $185,400 USD<span class="twd">（約 577.9萬 TWD）</span></td>
       <td data-label="負擔率" class="rate"><span class="pct num"><span class="badge">📊</span>35.9%</span><span class="mini"><i style="width:89.75%"></i></span></td>
     </tr>
     <tr>
@@ -183,7 +187,7 @@
       <td data-label="所得稅總額" class="num">約 314萬 JPY<span class="detail">所得税 205萬 + 住民税 109萬</span></td>
       <td data-label="社會保險費" class="num">約 174萬 JPY</td>
       <td data-label="總負擔金額" class="num">約 488萬 JPY</td>
-      <td data-label="淨收入" class="num net">約 1,012萬 JPY</td>
+      <td data-label="淨收入" class="num net">約 1,012萬 JPY<span class="twd">（約 210.8萬 TWD）</span></td>
       <td data-label="負擔率" class="rate"><span class="pct num"><span class="badge">📈</span>32.5%</span><span class="mini"><i style="width:81.25%"></i></span></td>
     </tr>
     <tr>
@@ -191,7 +195,7 @@
       <td data-label="所得稅總額" class="num">約 $65,200 USD<span class="detail">聯邦 6.52萬 + 德州 0</span></td>
       <td data-label="社會保險費" class="num">約 $15,900 USD<span class="detail">FICA</span></td>
       <td data-label="總負擔金額" class="num">約 $81,100 USD</td>
-      <td data-label="淨收入" class="num net">約 $208,000 USD</td>
+      <td data-label="淨收入" class="num net">約 $208,000 USD<span class="twd">（約 648.2萬 TWD）</span></td>
       <td data-label="負擔率" class="rate"><span class="pct num"><span class="badge">📉</span>28.1%</span><span class="mini"><i style="width:70.25%"></i></span></td>
     </tr>
     <tr>
@@ -199,7 +203,7 @@
       <td data-label="所得稅總額" class="num">約 131,000 RMB</td>
       <td data-label="社會保險費" class="num">約 46,800 RMB<span class="detail">已封頂</span></td>
       <td data-label="總負擔金額" class="num">約 177,800 RMB</td>
-      <td data-label="淨收入" class="num net">約 542,200 RMB</td>
+      <td data-label="淨收入" class="num net">約 542,200 RMB<span class="twd">（約 235.0萬 TWD）</span></td>
       <td data-label="負擔率" class="rate"><span class="pct num"><span class="badge">📉</span>24.7%</span><span class="mini"><i style="width:61.75%"></i></span></td>
     </tr>
     <tr>
@@ -219,6 +223,9 @@
   <dl>
     <dt>共同條件</dt>
     <dd>單身、無扶養、只有薪資所得，只算員工自付的部分。不含消費稅、雇主負擔的社保，也不含 401(k)、iDeCo、公積金等自願或儲蓄性質的提撥。PR95 和 PR99 的薪資門檻是原始表格提供的數字，各國統計的定義不同，沒有另外查證出處。</dd>
+
+    <dt>台幣等值</dt>
+    <dd>以 2025 年平均匯率換算：1 USD = 31.166 TWD、1 CAD ≈ 22.30 TWD（由美元匯率交叉換算）、1 JPY = 0.2082 TWD、1 RMB = 4.3347 TWD。</dd>
 
     <dt>🇨🇦 加拿大・安省（2025）</dt>
     <dd><ul>
